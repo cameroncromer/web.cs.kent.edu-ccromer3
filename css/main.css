@@ -95,21 +95,23 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+::selection {
+    background: #8b0000;
+    text-shadow: none;
+    color: #fff;
+}
+.navbar-fa:hover,
+.navbar-fa:focus {
+    text-decoration: none;
+    color: #fff;
+    background-color: transparent;
+}
+.navbar-fa {
+    color: #9d9d9d;
+    height: 50px;
+    width: 41px;
+    padding: 17px;
+}
 
 /* ==========================================================================
    Helper classes
