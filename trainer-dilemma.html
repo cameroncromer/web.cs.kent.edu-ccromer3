@@ -1,0 +1,169 @@
+<!doctype html>
+<html class="no-js" lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Trainer Dilemma | Cameron Cromer</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <style>
+    body {
+      padding-top: 50px;
+      padding-bottom: 20px;
+    }
+  </style>
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <style>
+    body {
+      background-image: url('img/poke-background.jpg');
+    }
+
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+
+    .center {
+      text-align: center;
+    }
+
+    .center button {
+      display: inline-block;
+    }
+
+    .poke-btn {
+      background: url('img/pokeball.png');
+      background-position: center;
+      background-size: 100px;
+      border: solid 1px somecolor;
+      border-radius: 50%;
+      color: black;
+      height: 100px;
+      padding-top: 80px;
+      width: 100px;
+    }
+
+    .poke-btn:hover {
+      color: gray;
+      opacity: 0.5;
+    }
+  </style>
+  <script src="js/vendor/clipboard.min.js"></script>
+  <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+  <script src="js/vendor/respond-1.4.2.min.js"></script>
+</head>
+<body>
+<!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Cameron Cromer</a>
+    </div>
+    <!--TODO: center navbar-fa within form-group, similarly to navbar-brand within navbar-header-->
+    <div id="navbar" class="navbar-collapse collapse">
+      <form class="navbar-form navbar-right">
+        <div class="form-group">
+          <a class="navbar-fa" href="https://www.facebook.com/cromer.cameron"><i class="fa fa-facebook fa-2x"></i></a>
+        </div>
+        <div class="form-group">
+          <a class="navbar-fa" href="https://github.com/cameroncromer"><i class="fa fa-github fa-2x"></i></a>
+        </div>
+        <div class="form-group">
+          <a class="navbar-fa" href="#"><i class="fa fa-linkedin fa-2x"></i></a>
+        </div>
+        <div class="form-group">
+          <a class="navbar-fa" href="#"><i class="fa fa-stack-overflow fa-2x"></i></a>
+        </div>
+      </form>
+    </div><!--/.navbar-collapse -->
+    <!--<div id="navbar" class="navbar-collapse collapse">
+        <div class="navbar-right">
+            <a class="navbar-fa" href="https://www.facebook.com/cromer.cameron"><i class="fa fa-facebook fa-3x"></i></a>
+            <a class="navbar-fa" href="https://github.com/cameroncromer"><i class="fa fa-github fa-3x"></i></a>
+            <a class="navbar-fa" href="#"><i class="fa fa-linkedin fa-3x"></i></a>
+            <a class="navbar-fa" href="#"><i class="fa fa-stack-overflow fa-3x"></i></a>
+        </div>
+    </div>--><!--/.navbar-collapse -->
+  </div>
+</nav>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+      <h3 align="center">Trainer Dilemma</h3>
+      <h4 align="center">CHOOSE THAT POKEMON!</h4>
+      <img src="img/oak.png">
+      <br>
+      <p align="center">This is Professor Oak.</p>
+      <br>
+      <p align="center">There are 3 POKeMON here!</p>
+      <br>
+      <p align="center"><span style="color: green">Bulbasaur</span>, <span style="color: red">Charmander</span>, or <span style="color: blue">Squirtle</span>? Just tap on the one that you want!</p>
+      <br>
+      <div class="center">
+        <button style="float: left;" class="poke-btn" onclick="p1change()"><b>Pokemon 1</b></button>
+        <button class="poke-btn" onclick="p2change()"><b>Pokemon 2</b></button>
+        <button style="float: right;" class="poke-btn" onclick="p3change()"><b>Pokemon 3</b></button>
+      </div>
+      <br>
+      <img id="image" src="img/blank.gif" width="150" height="150">
+    </div>
+    <div class="col-md-4"></div>
+  </div>
+
+  <hr>
+
+  <footer>
+    <p>&copy; 2017 Cameron Cromer</p>
+  </footer>
+</div><!-- /container -->
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
+<script src="js/vendor/bootstrap.min.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+<script>
+    function p1change () {
+        document.getElementById('image').src = 'img/bulbasaur.png'
+    }
+
+    function p2change () {
+        document.getElementById('image').src = 'img/squirtle.png'
+    }
+
+    function p3change () {
+        document.getElementById('image').src = 'img/charmander.png'
+    }
+</script>
+
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+<!--
+<script>
+    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+    function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+    e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+    e.src='https://www.google-analytics.com/analytics.js';
+    r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+    ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+</script>
+-->
+</body>
+</html>
